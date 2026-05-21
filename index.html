@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
+<!-- ********************************************************** COSMETIC PART ********************************************************** -->
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Manal BENAISSA — CV</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
-    rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 28 Q4 20 6 8 Q18 6 24 16 Q28 24 16 28Z' fill='%232e5c40'/></svg>" />
+
   <style>
     :root {
       --ink: #0f1a14;
@@ -19,6 +20,52 @@
       --paper: #fdfcf8;
       --rule: #d4cfc3;
       --accent: #3d7a55;
+    }
+
+    html.dark {
+      --ink: #e8f0eb;
+      --pine: #1a2e20;
+      --moss: #3d7a55;
+      --sage: #7ab894;
+      --mist: #a8c4b0;
+      --cream: #1e1e1e;
+      --paper: #2a2a2a;
+      --rule: #3a3a3a;
+      --accent: #6abf8a;
+    }
+
+    /* TOGGLE BUTTON */
+    .theme-toggle {
+      position: fixed;
+      top: 16px;
+      right: 20px;
+      z-index: 100;
+      background: var(--moss);
+      border: none;
+      border-radius: 20px;
+      width: 44px;
+      height: 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 3px;
+      transition: background .3s;
+    }
+
+    .theme-toggle .knob {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #fff;
+      transition: transform .3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .65rem;
+    }
+
+    html.dark .theme-toggle .knob {
+      transform: translateX(20px);
     }
 
     *,
@@ -397,7 +444,53 @@
       color: var(--pine);
     }
 
-    /* RESPONSIVE */
+    html.dark .entry-item {
+      color: #c8d8cc;
+    }
+
+    html.dark .entry-item strong {
+      color: #e8f0eb;
+    }
+
+    html.dark .entry-subtitle {
+      color: #7ab894;
+    }
+
+    html.dark .entry-location {
+      color: #8aaa96;
+    }
+
+    html.dark .entry-title {
+      color: #e8f0eb;
+    }
+
+    html.dark .pub-title {
+      color: #e8f0eb;
+    }
+
+    html.dark .pub-entry {
+      color: #c8d8cc;
+    }
+
+    html.dark .comm-entry {
+      color: #c8d8cc;
+    }
+
+    html.dark .comm-entry strong {
+      color: #e8f0eb;
+    }
+
+    html.dark .pill {
+      background: rgba(255, 255, 255, .08);
+      color: #c8d8cc;
+    }
+
+    html.dark .pill[style] {
+      background: #2e3e34 !important;
+      color: #c8d8cc !important;
+    }
+
+    /* Responsive */
     @media (max-width: 720px) {
       .page {
         grid-template-columns: 1fr;
@@ -415,8 +508,14 @@
   </style>
 </head>
 
+<!-- ********************************************************** THE PAGE PART ********************************************************** -->
+
 <body>
   <div class="page">
+
+    <button class="theme-toggle" onclick="document.documentElement.classList.toggle('dark')" title="Mode sombre">
+      <span class="knob">☀️</span>
+    </button>
 
     <!-- ══ SIDEBAR ══ -->
     <aside class="sidebar">
@@ -474,6 +573,18 @@
           <span class="pill">Linux / Shell</span>
         </div>
       </div>
+
+      <div>
+        <a href="https://www.ecoindex.fr/resultat/?id=54457531-c642-46b2-aa0e-24643ad0a978" target="_blank"
+          style="text-decoration:none;display:inline-flex;align-items:center;gap:6px;opacity:.55;transition:opacity .2s;"
+          onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.55'">
+          <span
+            style="background:#2e5c40;color:#fff;font-family:'DM Serif Display',serif;font-size:.7rem;font-weight:700;width:16px;height:16px;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">A</span>
+          <span style="font-size:.62rem;color:var(--mist);line-height:1.3;">Éco-conception de cette page<br /><span
+              style="color:var(--sage);">ecoindex.fr</span></span>
+        </a>
+      </div>
+
     </aside>
 
     <!-- ══ MAIN ══ -->
@@ -549,7 +660,7 @@
         </div>
 
         <div class="pub-entry">
-          <p class="pub-venue">Conférence Internationale · SPAC-PADW 2022</p>
+          <p class="pub-venue">Conférence Internationale · SBAC-PADW 2022</p>
           <p class="pub-title">Standalone Data-Center Sizing Combating the Over-Provisioning of the IT and Electrical
             Parts</p>
           <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/9978502"
@@ -597,7 +708,7 @@
 
         <div class="entry">
           <div class="entry-header">
-            <span class="entry-title">ATER</span>
+            <span class="entry-title">ATER (50%)</span>
             <span class="entry-date">Sep 2024 — Août 2026</span>
           </div>
           <span class="entry-location">Supmicrotech-ENSMM · Besançon, France</span>
@@ -605,7 +716,7 @@
             <p class="entry-item"><strong>1ère année (école d'ingénieur) :</strong> Programmation Orientée Objet (Java)
               — TD / TP</p>
             <p class="entry-item"><strong>2ème année (école d'ingénieur) :</strong> Développement logiciel — Scrum /
-              Agile + Introduction à Git — Projet</p>
+              Agile + Introduction à Git</p>
           </div>
         </div>
 
@@ -635,7 +746,11 @@
           </div>
           <span class="entry-location">LIG-Polaris · Grenoble, France</span>
           <div class="entry-body">
-            <p class="entry-item">Informatique "Unplugged", médiation numérique &amp; algorithmique</p>
+            <p class="entry-item">Informatique "Unplugged", médiation numérique &amp; algorithmique — <a
+                href="https://iso.gricad-pages.univ-grenoble-alpes.fr/ISO/Base-Ball/" target="_blank"
+                style="color:var(--sage);text-decoration:none;border-bottom:1px solid var(--sage);font-size:.78rem;transition:color .2s;"
+                onmouseover="this.style.color='var(--pine)'" onmouseout="this.style.color='var(--sage)'">voir le
+                projet</a></p>
           </div>
         </div>
 
@@ -819,6 +934,14 @@
 
     </main>
   </div>
+  <script>
+    const btn = document.querySelector('.theme-toggle');
+    const knob = btn.querySelector('.knob');
+    btn.addEventListener('click', () => {
+      const dark = document.documentElement.classList.contains('dark');
+      knob.textContent = dark ? '☀️' : '🌙';
+    });
+  </script>
 </body>
 
 </html>
