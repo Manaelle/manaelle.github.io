@@ -1,37 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
-<!-- ********************************************************** COSMETIC PART ********************************************************** -->
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Manal BENAISSA — CV</title>
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 28 Q4 20 6 8 Q18 6 24 16 Q28 24 16 28Z' fill='%232e5c40'/></svg>" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 28 Q4 20 6 8 Q18 6 24 16 Q28 24 16 28Z' fill='%232e5c40'/></svg>"/>
 
   <style>
     :root {
-      --ink: #0f1a14;
-      --pine: #1a2e20;
-      --moss: #2e5c40;
-      --sage: #5a8a6a;
-      --mist: #c8ddd0;
-      --cream: #f5f2ea;
-      --paper: #fdfcf8;
-      --rule: #d4cfc3;
-      --accent: #3d7a55;
+      --ink:      #0f1a14;
+      --pine:     #1a3a2a;
+      --moss:     #2e5c40;
+      --sage:     #5a8a6a;
+      --mist:     #c8ddd0;
+      --cream:    #f5f2ea;
+      --paper:    #fdfcf8;
+      --rule:     #d4cfc3;
+      --accent:   #3d7a55;
     }
 
     html.dark {
-      --ink: #e8f0eb;
-      --pine: #1a2e20;
-      --moss: #3d7a55;
-      --sage: #7ab894;
-      --mist: #a8c4b0;
-      --cream: #1e1e1e;
-      --paper: #2a2a2a;
-      --rule: #3a3a3a;
-      --accent: #6abf8a;
+      --ink:      #e8f0eb;
+      --pine:     #1a2e20;
+      --moss:     #3d7a55;
+      --sage:     #7ab894;
+      --mist:     #a8c4b0;
+      --cream:    #1e1e1e;
+      --paper:    #2a2a2a;
+      --rule:     #3a3a3a;
+      --accent:   #6abf8a;
     }
 
     /* TOGGLE BUTTON */
@@ -68,17 +65,9 @@
       transform: translateX(20px);
     }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       background: var(--cream);
@@ -110,19 +99,10 @@
       gap: 36px;
     }
 
-    .sidebar::-webkit-scrollbar {
-      width: 4px;
-    }
+    .sidebar::-webkit-scrollbar { width: 4px; }
+    .sidebar::-webkit-scrollbar-thumb { background: var(--moss); border-radius: 2px; }
 
-    .sidebar::-webkit-scrollbar-thumb {
-      background: var(--moss);
-      border-radius: 2px;
-    }
-
-    .name-block {
-      border-bottom: 1px solid rgba(200, 221, 208, .2);
-      padding-bottom: 28px;
-    }
+    .name-block { border-bottom: 1px solid rgba(200,221,208,.2); padding-bottom: 28px; }
 
     .name-block h1 {
       font-family: 'DM Serif Display', serif;
@@ -141,11 +121,7 @@
       font-weight: 500;
     }
 
-    .contact-block {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+    .contact-block { display: flex; flex-direction: column; gap: 10px; }
 
     .contact-block a {
       color: var(--mist);
@@ -156,10 +132,7 @@
       gap: 8px;
       transition: color .2s;
     }
-
-    .contact-block a:hover {
-      color: #fff;
-    }
+    .contact-block a:hover { color: #fff; }
 
     .contact-block .icon {
       width: 16px;
@@ -170,14 +143,10 @@
     }
 
     /* NAV */
-    .nav {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
+    .nav { display: flex; flex-direction: column; gap: 4px; }
 
     .nav a {
-      color: rgba(200, 221, 208, .6);
+      color: rgba(200,221,208,.6);
       text-decoration: none;
       font-size: 0.72rem;
       letter-spacing: .1em;
@@ -188,16 +157,13 @@
       padding-left: 10px;
       transition: all .2s;
     }
-
     .nav a:hover {
       color: #fff;
       border-left-color: var(--sage);
     }
 
     /* SKILLS in sidebar */
-    .skills-block {
-      margin-top: auto;
-    }
+    .skills-block { margin-top: auto; }
 
     .skill-label {
       font-size: 0.65rem;
@@ -208,15 +174,11 @@
       margin-bottom: 10px;
     }
 
-    .pill-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
+    .pill-group { display: flex; flex-wrap: wrap; gap: 6px; }
 
     .pill {
-      background: rgba(255, 255, 255, .07);
-      border: 1px solid rgba(200, 221, 208, .15);
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(200,221,208,.15);
       color: var(--mist);
       font-size: 0.68rem;
       font-family: 'DM Mono', monospace;
@@ -234,42 +196,16 @@
     }
 
     /* ── SECTION ── */
-    .section {
-      margin-bottom: 44px;
-      opacity: 0;
-      transform: translateY(18px);
-      animation: rise .5s ease forwards;
-    }
-
-    .section:nth-child(1) {
-      animation-delay: .05s;
-    }
-
-    .section:nth-child(2) {
-      animation-delay: .12s;
-    }
-
-    .section:nth-child(3) {
-      animation-delay: .19s;
-    }
-
-    .section:nth-child(4) {
-      animation-delay: .26s;
-    }
-
-    .section:nth-child(5) {
-      animation-delay: .33s;
-    }
-
-    .section:nth-child(6) {
-      animation-delay: .40s;
-    }
+    .section { margin-bottom: 44px; opacity: 0; transform: translateY(18px); animation: rise .5s ease forwards; }
+    .section:nth-child(1) { animation-delay: .05s; }
+    .section:nth-child(2) { animation-delay: .12s; }
+    .section:nth-child(3) { animation-delay: .19s; }
+    .section:nth-child(4) { animation-delay: .26s; }
+    .section:nth-child(5) { animation-delay: .33s; }
+    .section:nth-child(6) { animation-delay: .40s; }
 
     @keyframes rise {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .section-title {
@@ -283,7 +219,6 @@
       align-items: center;
       gap: 12px;
     }
-
     .section-title::after {
       content: '';
       flex: 1;
@@ -292,16 +227,8 @@
     }
 
     /* ENTRY */
-    .entry {
-      display: grid;
-      gap: 2px;
-      padding: 16px 0;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .entry:last-child {
-      border-bottom: none;
-    }
+    .entry { display: grid; gap: 2px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+    .entry:last-child { border-bottom: none; }
 
     .entry-header {
       display: flex;
@@ -336,12 +263,7 @@
       color: #7a8c82;
     }
 
-    .entry-body {
-      margin-top: 8px;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
+    .entry-body { margin-top: 8px; display: flex; flex-direction: column; gap: 5px; }
 
     .entry-item {
       font-size: .83rem;
@@ -350,7 +272,6 @@
       padding-left: 14px;
       position: relative;
     }
-
     .entry-item::before {
       content: '▸';
       position: absolute;
@@ -373,10 +294,7 @@
       color: #2a3d32;
       line-height: 1.6;
     }
-
-    .pub-entry:last-child {
-      border-bottom: none;
-    }
+    .pub-entry:last-child { border-bottom: none; }
 
     .pub-venue {
       font-size: .68rem;
@@ -387,10 +305,7 @@
       margin-bottom: 3px;
     }
 
-    .pub-title {
-      color: var(--ink);
-      font-weight: 500;
-    }
+    .pub-title { color: var(--ink); font-weight: 500; }
 
     .pub-link {
       display: inline-block;
@@ -403,11 +318,7 @@
       transition: border-color .2s, color .2s;
       word-break: break-all;
     }
-
-    .pub-link:hover {
-      color: var(--pine);
-      border-bottom-color: var(--pine);
-    }
+    .pub-link:hover { color: var(--pine); border-bottom-color: var(--pine); }
 
     /* COMM / SIMPLE LIST */
     .comm-entry {
@@ -419,17 +330,8 @@
       gap: 10px;
       align-items: flex-start;
     }
-
-    .comm-entry:last-child {
-      border-bottom: none;
-    }
-
-    .comm-bullet {
-      color: var(--sage);
-      margin-top: 3px;
-      font-size: .7rem;
-      flex-shrink: 0;
-    }
+    .comm-entry:last-child { border-bottom: none; }
+    .comm-bullet { color: var(--sage); margin-top: 3px; font-size: .7rem; flex-shrink: 0; }
 
     /* LANG BADGE */
     .lang-badge {
@@ -444,553 +346,400 @@
       color: var(--pine);
     }
 
-    html.dark .entry-item {
-      color: #c8d8cc;
-    }
-
-    html.dark .entry-item strong {
-      color: #e8f0eb;
-    }
-
-    html.dark .entry-subtitle {
-      color: #7ab894;
-    }
-
-    html.dark .entry-location {
-      color: #8aaa96;
-    }
-
-    html.dark .entry-title {
-      color: #e8f0eb;
-    }
-
-    html.dark .pub-title {
-      color: #e8f0eb;
-    }
-
-    html.dark .pub-entry {
-      color: #c8d8cc;
-    }
-
-    html.dark .comm-entry {
-      color: #c8d8cc;
-    }
-
-    html.dark .comm-entry strong {
-      color: #e8f0eb;
-    }
-
-    html.dark .pill {
-      background: rgba(255, 255, 255, .08);
-      color: #c8d8cc;
-    }
-
-    html.dark .pill[style] {
-      background: #2e3e34 !important;
-      color: #c8d8cc !important;
-    }
+    html.dark .entry-item { color: #c8d8cc; }
+    html.dark .entry-item strong { color: #e8f0eb; }
+    html.dark .entry-subtitle { color: #7ab894; }
+    html.dark .entry-location { color: #8aaa96; }
+    html.dark .entry-title { color: #e8f0eb; }
+    html.dark .pub-title { color: #e8f0eb; }
+    html.dark .pub-entry { color: #c8d8cc; }
+    html.dark .comm-entry { color: #c8d8cc; }
+    html.dark .comm-entry strong { color: #e8f0eb; }
+    html.dark .pill { background: rgba(255,255,255,.08); color: #c8d8cc; }
+    html.dark .pill[style] { background: #2e3e34 !important; color: #c8d8cc !important; }
 
     /* Responsive */
     @media (max-width: 720px) {
-      .page {
-        grid-template-columns: 1fr;
-      }
-
-      .sidebar {
-        position: static;
-        height: auto;
-      }
-
-      .main {
-        padding: 32px 24px 56px;
-      }
+      .page { grid-template-columns: 1fr; }
+      .sidebar { position: static; height: auto; }
+      .main { padding: 32px 24px 56px; }
     }
+
+    /* ── BILINGUE FR / EN ── */
+    html[lang="fr"] en { display: none; }
+    html[lang="en"] fr { display: none; }
+
+    .lang-switch { display: inline-flex; border: 1px solid rgba(200,221,208,.25); border-radius: 4px; overflow: hidden; align-self: flex-start; }
+    .lang-switch button {
+      background: transparent; border: none; color: var(--mist); cursor: pointer;
+      font-family: 'DM Mono', monospace; font-size: .7rem; letter-spacing: .08em;
+      padding: 5px 14px; transition: background .2s, color .2s;
+    }
+    .lang-switch button + button { border-left: 1px solid rgba(200,221,208,.25); }
+    .lang-switch button:hover { background: rgba(255,255,255,.08); }
+    .lang-switch button.active { background: var(--moss); color: #fff; }
+
+    .section:nth-child(7) { animation-delay: .47s; }
+    .profil-text { font-size: .88rem; line-height: 1.8; color: #2a3d32; }
+    .inline-link { color: var(--sage); text-decoration: none; border-bottom: 1px solid var(--sage); font-size: .78rem; transition: color .2s; }
+    .inline-link:hover { color: var(--pine); }
+    .eco-badge { text-decoration: none; display: inline-flex; align-items: center; gap: 6px; opacity: .55; transition: opacity .2s; }
+    .eco-badge:hover { opacity: 1; }
+    .eco-badge b { background: #2e5c40; color: #fff; font-family: 'DM Serif Display', serif; font-size: .7rem; width: 16px; height: 16px; border-radius: 2px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .eco-badge span { font-size: .62rem; color: var(--mist); line-height: 1.3; }
+    .eco-badge small { color: var(--sage); font-size: inherit; }
+
+    .skills-wrap { display: flex; flex-direction: column; gap: 20px; padding-top: 4px; }
+    .skill-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .skill-head p { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--sage); font-weight: 600; }
+    .skill-head i { flex: 1; height: 1px; background: var(--rule); }
+    .skill-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+    .skill-sub { font-size: .72rem; color: #7a8c82; width: 80px; flex-shrink: 0; }
+    .pill-light { background: var(--mist); color: var(--pine); border-color: transparent; }
+
+    html.dark .profil-text { color: #c8d8cc; }
+    html.dark .pill-light { background: #2e3e34; color: #c8d8cc; }
   </style>
+  <script>try{var l=localStorage.getItem('lang')||((navigator.language||'fr').slice(0,2)==='fr'?'fr':'en');document.documentElement.lang=l}catch(e){}</script>
 </head>
-
-<!-- ********************************************************** THE PAGE PART ********************************************************** -->
-
 <body>
-  <div class="page">
+<div class="page">
 
-    <button class="theme-toggle" onclick="document.documentElement.classList.toggle('dark')" title="Mode sombre">
-      <span class="knob">☀️</span>
-    </button>
+  <button class="theme-toggle" id="themeBtn" title="Mode sombre / Dark mode">
+    <span class="knob">☀️</span>
+  </button>
 
-    <!-- ══ SIDEBAR ══ -->
-    <aside class="sidebar">
-      <div class="name-block">
-        <h1>Manal<br />BENAISSA</h1>
-        <p class="tagline">Research Software Engineer · Data Scientist · Green IT & Cloud/HPC Computing</p>
+  <!-- ══ SIDEBAR ══ -->
+  <aside class="sidebar">
+    <div class="name-block">
+      <h1>Manal<br/>BENAISSA</h1>
+      <p class="tagline">Research Software Engineer · Data Scientist · Green IT &amp; Cloud/HPC Computing</p>
+    </div>
+
+    <div class="contact-block">
+      <a href="mailto:manal.benaissa@etik.com">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+        manal.benaissa@etik.com
+      </a>
+      <a href="https://www.linkedin.com/in/manal-benaissa-78629b347/" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+    </div>
+
+    <div class="lang-switch" role="group" aria-label="Langue / Language">
+      <button data-lang="fr">FR</button>
+      <button data-lang="en">EN</button>
+    </div>
+
+    <nav class="nav">
+      <a href="#profil"><fr>Profil</fr><en>Profile</en></a>
+      <a href="#experience"><fr>Expérience Recherche</fr><en>Research Experience</en></a>
+      <a href="#publications">Publications</a>
+      <a href="#communications">Communications</a>
+      <a href="#enseignement"><fr>Enseignement</fr><en>Teaching</en></a>
+      <a href="#formations"><fr>Formations</fr><en>Training</en></a>
+      <a href="#skills">Skills</a>
+    </nav>
+
+    <div>
+      <p class="skill-label"><fr>Langues</fr><en>Languages</en></p>
+      <div class="pill-group">
+        <span class="pill">🇫🇷 <fr>Français — Natif</fr><en>French — Native</en></span>
+        <span class="pill">🇬🇧 <fr>Anglais — B2</fr><en>English — B2</en></span>
+      </div>
+    </div>
+
+    <div class="skills-block">
+      <p class="skill-label"><fr>Stack technique</fr><en>Tech stack</en></p>
+      <div class="pill-group">
+        <span class="pill">Python</span><span class="pill">Java</span><span class="pill">C/C++</span><span class="pill">Git</span>
+        <span class="pill">MPI / OpenMP</span><span class="pill">Rust</span><span class="pill">Docker</span><span class="pill">Linux / Shell</span>
+      </div>
+    </div>
+
+    <div>
+      <a class="eco-badge" href="https://www.ecoindex.fr/resultat/?id=54457531-c642-46b2-aa0e-24643ad0a978" target="_blank">
+        <b>A</b>
+        <span><fr>Éco-conception de cette page</fr><en>Eco-design of this page</en><br/><small>ecoindex.fr</small></span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ══ MAIN ══ -->
+  <main class="main">
+
+    <!-- PROFIL -->
+    <section class="section" id="profil">
+      <h2 class="section-title"><fr>Profil</fr><en>Profile</en></h2>
+      <p class="profil-text">
+        <fr>Docteure en informatique spécialisée dans l'optimisation de datacenters verts (ANR Datazero2), j'ai développé sur 4 ans un module de simulation complet en Python — de la conception algorithmique à la visualisation des résultats, dans une démarche de clean code et de recherche reproductible. Mon profil croise ingénierie logicielle, calcul haute performance (OpenMP, MPI, Grid5000) et data science appliquée à des problèmes d'optimisation sous contraintes environnementales.</fr>
+        <en>PhD in computer science specialized in green datacenter optimization (ANR Datazero2 project). Over 4 years, I built a complete simulation module in Python — from algorithm design to results visualization — following clean-code and reproducible-research practices. My profile combines software engineering, high-performance computing (OpenMP, MPI, Grid5000) and data science applied to optimization problems under environmental constraints.</en>
+      </p>
+    </section>
+
+    <!-- EXPERIENCE RECHERCHE -->
+    <section class="section" id="experience">
+      <h2 class="section-title"><fr>Expérience Recherche</fr><en>Research Experience</en></h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">ATER</span>
+          <span class="entry-date"><fr>Sep 2024 — Présent</fr><en>Sep 2024 — Present</en></span>
+        </div>
+        <span class="entry-subtitle"><fr>Introduction à Java + Développement logiciel</fr><en>Introduction to Java + Software Development</en></span>
+        <span class="entry-location">Femto-ST · Besançon, France</span>
+        <div class="entry-body">
+          <p class="entry-item"><strong>Description :</strong>
+            <fr>Enseignement 1ère et 2ème année d'école d'ingénieurs (~ 15-30 élèves) au développement Orienté Objet (Java) + Méthode Agile/Scrum + Introduction à Git/Github. Suivi des projets : développement d'un jeu multijoueur en Java, avec BDD (MariaDB). Poursuite des travaux de recherche : Robust and frugal datacenter Sizing. Développement en Python, multi-thread, exécuté sur <a class="inline-link" href="https://www.grid5000.fr/w/Grid5000:Home" target="_blank">Grid5000</a> (Datacenter géodistribué Cloud/HPC).</fr>
+            <en>Teaching 1st and 2nd year engineering students (~15–30 per class): object-oriented development (Java), Agile/Scrum methodology and an introduction to Git/GitHub. Project supervision: development of a multiplayer Java game with a database (MariaDB). Continuation of research work: Robust and frugal datacenter sizing. Multi-threaded Python development, run on <a class="inline-link" href="https://www.grid5000.fr/w/Grid5000:Home" target="_blank">Grid5000</a> (geo-distributed Cloud/HPC datacenter).</en>
+          </p>
+        </div>
       </div>
 
-      <div class="contact-block">
-        <a href="mailto:manal.benaissa@etik.com">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <rect x="2" y="4" width="20" height="16" rx="2" />
-            <path d="M2 7l10 7 10-7" />
-          </svg>
-          manal.benaissa@etik.com
-        </a>
-
-        <a href="https://www.linkedin.com/in/manal-benaissa-78629b347/" target="_blank">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
-            <rect x="2" y="9" width="4" height="12" />
-            <circle cx="4" cy="4" r="2" />
-          </svg>
-          LinkedIn
-        </a>
-      </div>
-
-      <nav class="nav">
-        <a href="#experience">Expérience Recherche</a>
-        <a href="#publications">Publications</a>
-        <a href="#communications">Communications</a>
-        <a href="#enseignement">Enseignement</a>
-        <a href="#formations">Formations</a>
-        <a href="#skills">Skills</a>
-      </nav>
-
-      <div>
-        <p class="skill-label">Langues</p>
-        <div class="pill-group">
-          <span class="pill">🇫🇷 Français — Natif</span>
-          <span class="pill">🇬🇧 Anglais — B2</span>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title"><fr>Doctorat Informatique — Femto-ST</fr><en>PhD in Computer Science — Femto-ST</en></span>
+          <span class="entry-date"><fr>Oct 2020 — Déc 2024</fr><en>Oct 2020 — Dec 2024</en></span>
+        </div>
+        <span class="entry-location">Besançon, France</span>
+        <div class="entry-body">
+          <p class="entry-item"><strong><fr>Sujet :</fr><en>Topic:</en></strong> Standalone Data-Center Sizing Combating the Over-Provisioning of the IT and Electrical Parts</p>
+          <p class="entry-item"><strong><fr>Encadrants :</fr><en>Supervisors:</en></strong> Jean-Marc NICOD &amp; Georges DA COSTA</p>
+          <p class="entry-item"><strong>Description :</strong>
+            <fr>Projet ANR Datazero2, simulation d'un datacenter 100% autonome en énergie. Développement solo du module entier de Sizing (Python, 4 ans, ownership complet d'un projet logiciel de bout en bout) — génération de configurations optimales, parallélisation multi-thread avancée (optimisation performance, scalabilité), clean code, recherche reproductible, documentation complète et visualisation des résultats. Architecture modulaire, documentée et prête à l'intégration.</fr>
+            <en>ANR Datazero2 project: simulation of a datacenter that is 100% energy-autonomous. Sole developer of the entire Sizing module (Python, 4 years, full ownership of an end-to-end software project) — generation of optimal configurations, advanced multi-thread parallelization (performance optimization, scalability), clean code, reproducible research, complete documentation and results visualization. Modular architecture, documented and ready for integration.</en>
+          </p>
+          <p class="entry-item"><strong><fr>Lien du projet :</fr><en>Project link:</en></strong> <a class="inline-link" href="https://www.irit.fr/datazero/datazero2/" target="_blank">www.irit.fr/datazero/datazero2/</a></p>
         </div>
       </div>
 
-      <div class="skills-block">
-        <p class="skill-label">Stack technique</p>
-        <div class="pill-group">
-          <span class="pill">Python</span>
-          <span class="pill">Java</span>
-          <span class="pill">C/C++</span>
-          <span class="pill">Git</span>
-          <span class="pill">MPI / OpenMP</span>
-          <span class="pill">Rust</span>
-          <span class="pill">Docker</span>
-          <span class="pill">Linux / Shell</span>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Master 2 Data Infrastructure — CTRL-A</span>
+          <span class="entry-date"><fr>Fév 2020 — Juin 2020</fr><en>Feb 2020 — Jun 2020</en></span>
+        </div>
+        <span class="entry-subtitle"><fr>Informatique MOSIG, Stage + Magister</fr><en>Computer Science MOSIG, Internship + Magister</en></span>
+        <span class="entry-location">Grenoble, France</span>
+        <div class="entry-body">
+          <p class="entry-item"><strong><fr>Sujet :</fr><en>Topic:</en></strong> Relationships between Scheduling and Autonomic Computing Techniques Applied to Parallel Computing Resource Management</p>
+          <p class="entry-item"><strong><fr>Encadrants :</fr><en>Supervisors:</en></strong> Raphaël BLEUSE &amp; Eric RUTTEN</p>
+          <p class="entry-item"><strong>Description :</strong>
+            <fr>Exploration de l'alliance entre informatique parallèle et automatique — application des boucles de rétrocontrôle (MAPE-K) à la conception d'algorithmes d'ordonnancement clairvoyants pour la gestion de ressources. Première incursion d'un domaine dans l'autre, illustrant une capacité d'adaptation à des champs disciplinaires nouveaux.</fr>
+            <en>Exploring the combination of parallel computing and control theory — applying feedback loops (MAPE-K) to the design of clairvoyant scheduling algorithms for resource management. A first foray from one field into the other, illustrating the ability to adapt to new disciplines.</en>
+          </p>
         </div>
       </div>
 
-      <div>
-        <a href="https://www.ecoindex.fr/resultat/?id=54457531-c642-46b2-aa0e-24643ad0a978" target="_blank"
-          style="text-decoration:none;display:inline-flex;align-items:center;gap:6px;opacity:.55;transition:opacity .2s;"
-          onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.55'">
-          <span
-            style="background:#2e5c40;color:#fff;font-family:'DM Serif Display',serif;font-size:.7rem;font-weight:700;width:16px;height:16px;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">A</span>
-          <span style="font-size:.62rem;color:var(--mist);line-height:1.3;">Éco-conception de cette page<br /><span
-              style="color:var(--sage);">ecoindex.fr</span></span>
-        </a>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Master 1 Data Infrastructure — LIG-POLARIS</span>
+          <span class="entry-date"><fr>Fév 2019 — Juin 2019</fr><en>Feb 2019 — Jun 2019</en></span>
+        </div>
+        <span class="entry-subtitle"><fr>Informatique, Stage + Magister</fr><en>Computer Science, Internship + Magister</en></span>
+        <span class="entry-location">Grenoble, France</span>
+        <div class="entry-body">
+          <p class="entry-item"><strong><fr>Sujet :</fr><en>Topic:</en></strong> Tracing tool with OpenMP (task-based parallelism)</p>
+          <p class="entry-item"><strong><fr>Encadrant :</fr><en>Supervisor:</en></strong> Vincent DANJEAN</p>
+          <p class="entry-item"><strong>Description :</strong>
+            <fr>Développement d'un outil de traçage visuel pour OpenMP en C/C++, permettant d'analyser et de visualiser le comportement des processus en cours d'exécution, via d'autres alternatives que le diagramme de Gantt. Étude approfondie de la parallélisation bas niveau et des mécanismes de synchronisation inter-processus.</fr>
+            <en>Development of a visual tracing tool for OpenMP in C/C++, to analyze and visualize the behavior of running processes through alternatives to the Gantt chart. In-depth study of low-level parallelization and inter-process synchronization mechanisms.</en>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section class="section" id="publications">
+      <h2 class="section-title">Publications</h2>
+
+      <div class="pub-entry">
+        <p class="pub-venue"><fr>Thèse de doctorat · 2024</fr><en>PhD thesis · 2024</en></p>
+        <p class="pub-title">Optimization of the IT and electrical sizing process of a green, medium-sized datacenter powered exclusively by renewable energy sources, considering environmental and external uncertainty</p>
+        <a class="pub-link" href="https://theses.fr/2024UBFCD076" target="_blank">theses.fr/2024UBFCD076</a>
       </div>
 
-    </aside>
+      <div class="pub-entry">
+        <p class="pub-venue"><fr>Conférence Internationale · SBAC-PADW 2022</fr><en>International Conference · SBAC-PADW 2022</en></p>
+        <p class="pub-title">Standalone Data-Center Sizing Combating the Over-Provisioning of the IT and Electrical Parts</p>
+        <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/9978502" target="_blank">ieeexplore.ieee.org/abstract/document/9978502</a>
+      </div>
 
-    <!-- ══ MAIN ══ -->
-    <main class="main">
+      <div class="pub-entry">
+        <p class="pub-venue"><fr>Conférence Nationale · COMPAS 2022</fr><en>National Conference · COMPAS 2022</en></p>
+        <p class="pub-title">Dimensionnement d'un centre de données autonome alimenté 100% par des énergies renouvelables<en> (in French)</en></p>
+        <a class="pub-link" href="https://hal.science/hal-03889472/" target="_blank">hal.science/hal-03889472/</a>
+      </div>
 
-      <!-- PROFIL -->
-      <section class="section" id="profil">
-        <h2 class="section-title">Profil</h2>
-        <p class="pub-title">
-          Docteure en informatique spécialisée dans l'optimisation de datacenters verts (ANR Datazero2),
-          j'ai développé sur 4 ans un module de simulation complet en Python — de la conception
-          algorithmique à la visualisation des résultats, dans une démarche de clean code et
-          de recherche reproductible. Mon profil croise ingénierie logicielle, calcul haute performance
-          (OpenMP, MPI, Grid5000) et data science appliquée à des problèmes d'optimisation sous
-          contraintes environnementales.
-        </p>
-      </section>
+      <div class="pub-entry">
+        <p class="pub-venue"><fr>Master · 2020</fr><en>Master's thesis · 2020</en></p>
+        <p class="pub-title">Relationships between Scheduling and Autonomic Computing Techniques Applied to Parallel Computing Resource Management</p>
+        <a class="pub-link" href="https://inria.hal.science/hal-03758320" target="_blank">inria.hal.science/hal-03758320</a>
+      </div>
+    </section>
 
-      <!-- EXPERIENCE -->
-      <section class="section" id="experience">
-        <h2 class="section-title">Expérience Recherche</h2>
+    <!-- COMMUNICATIONS -->
+    <section class="section" id="communications">
+      <h2 class="section-title">Communications</h2>
+      <div class="comm-entry"><span class="comm-bullet">▸</span><span>
+        <fr>SCALE Days – GDR RO LIP6 · Décembre 2022 &amp; Workshop "New Challenges in Scheduling Theory" – Inria · Mai 2022</fr>
+        <en>SCALE Days – GDR RO LIP6 · December 2022 &amp; "New Challenges in Scheduling Theory" Workshop – Inria · May 2022</en></span></div>
+      <div class="comm-entry"><span class="comm-bullet">▸</span><span>
+        <fr>Présentations aux journées du département AS2M – FEMTO-ST, Besançon (2020–2022)</fr>
+        <en>Presentations at the AS2M department days – FEMTO-ST, Besançon (2020–2022)</en></span></div>
+      <div class="comm-entry"><span class="comm-bullet">▸</span><span>
+        <fr>Séminaire au département PHM – FEMTO-ST, Besançon (2020–2022)</fr>
+        <en>Seminar at the PHM department – FEMTO-ST, Besançon (2020–2022)</en></span></div>
+    </section>
 
-        <div class="entry">
-          <div class="entry-header">
-            <span class="entry-title">ATER</span>
-            <span class="entry-date">Sep 2024 — Présent</span>
-          </div>
-          <span class="entry-subtitle">Introduction à Java + Développement logiciel</span>
-          <span class="entry-location">Femto-ST · Besançon, France</span>
-          <div class="entry-body">
-            <p class="entry-item"><strong>Description :</strong> Enseignement 1ère et 2ème année d'école d'ingénieurs
-              (~ 15-30 élèves) au développement Orienté Objet (Java) + Méthode Agile/Scrum + Introduction à Git/Github.
-              Suivi des projet : développement d'un jeu multijoueur en Java, avec BDD (MariaDB).
-              Poursuite des travaux de recherche : Robust and frugal datacenter Sizing. Développement en Python,
-              multi-thread, exécuté sur <a class="pub-link" href="https://www.grid5000.fr/w/Grid5000:Home"
-                target="_blank">Grid5000</a> (Datacenter géodistribué Cloud/HPC).
-            </p>
-          </div>
+    <!-- ENSEIGNEMENT -->
+    <section class="section" id="enseignement">
+      <h2 class="section-title"><fr>Expérience Enseignement</fr><en>Teaching Experience</en></h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">ATER</span>
+          <span class="entry-date"><fr>Sep 2024 — Présent</fr><en>Sep 2024 — Present</en></span>
+        </div>
+        <span class="entry-location">Supmicrotech-ENSMM · Besançon, France</span>
+        <div class="entry-body">
+          <p class="entry-item"><strong><fr>1ère année (école d'ingénieur) :</fr><en>1st year (engineering school):</en></strong>
+            <fr>Programmation Orientée Objet (Java) — TD / TP</fr><en>Object-Oriented Programming (Java) — tutorials / labs</en></p>
+          <p class="entry-item"><strong><fr>2ème année (école d'ingénieur) :</fr><en>2nd year (engineering school):</en></strong>
+            <fr>Développement logiciel — Scrum / Agile + Introduction à Git</fr><en>Software development — Scrum / Agile + Introduction to Git</en></p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title"><fr>Co-encadrement projet PIST REA</fr><en>Co-supervision of the PIST REA project</en></span>
+          <span class="entry-date">2024</span>
+        </div>
+        <span class="entry-location">Supmicrotech-ENSMM · Besançon, France</span>
+        <div class="entry-body">
+          <p class="entry-item">
+            <fr>Co-supervision de projet d'études d'étudiants de 3ème année, pendant un semestre. Analyse statistique de données sur un sujet complexe, initiation au travail de Data Analyst (Mentoring, tech lead junior).</fr>
+            <en>Co-supervision of a study project with 3rd-year students over one semester. Statistical data analysis on a complex topic, introduction to Data Analyst work (mentoring, junior tech lead).</en></p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title"><fr>Chargé d'enseignement doctorant — 64h</fr><en>Doctoral teaching assistant — 64h</en></span>
+          <span class="entry-date">2020 — 2022</span>
+        </div>
+        <span class="entry-location">Supmicrotech-ENSMM · Besançon, France</span>
+        <div class="entry-body">
+          <p class="entry-item"><fr>Programmation orientée objet (Java) — TP, 1ère &amp; 2ème année</fr><en>Object-oriented programming (Java) — labs, 1st &amp; 2nd year</en></p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title"><fr>Stage informatique — Médiation</fr><en>Computer Science Internship — Outreach</en></span>
+          <span class="entry-date"><fr>Fév – Juin 2018</fr><en>Feb – Jun 2018</en></span>
+        </div>
+        <span class="entry-location">LIG-Polaris · Grenoble, France</span>
+        <div class="entry-body">
+          <p class="entry-item">
+            <fr>Informatique "Unplugged", médiation numérique &amp; algorithmique — <a class="inline-link" href="https://iso.gricad-pages.univ-grenoble-alpes.fr/ISO/Base-Ball/" target="_blank">voir le projet</a></fr>
+            <en>"Unplugged" computer science, digital outreach &amp; algorithmics — <a class="inline-link" href="https://iso.gricad-pages.univ-grenoble-alpes.fr/ISO/Base-Ball/" target="_blank">see the project</a></en></p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title"><fr>Vulgarisation scientifique</fr><en>Science communication</en></span>
+          <span class="entry-date"><fr>Juin 2018</fr><en>Jun 2018</en></span>
+        </div>
+        <div class="entry-body">
+          <p class="entry-item">
+            <fr>Formation à la vulgarisation de sujets de recherche dans le cadre de la culture scientifique</fr>
+            <en>Training in communicating research topics to the public as part of scientific culture outreach</en></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMATIONS -->
+    <section class="section" id="formations">
+      <h2 class="section-title"><fr>Formations &amp; Événements</fr><en>Training &amp; Events</en></h2>
+      <div class="comm-entry"><span class="comm-bullet">▸</span><span><strong>
+        <fr>Formation Cybersécurité <a class="inline-link" href="https://tryhackme.com/" target="_blank">TryHackMe</a></fr><en>Cybersecurity training <a class="inline-link" href="https://tryhackme.com/" target="_blank">TryHackMe</a></en></strong>
+        <fr>— Formation certifiante Red/Blue team · été 2026 · En ligne</fr><en>— Certifying Red/Blue team training · summer 2026 · Online</en></span></div>
+      <div class="comm-entry"><span class="comm-bullet">▸</span><span><strong>GreenDays 2023 &amp; 2024</strong>
+        <fr>— Séminaires Green IT · Lyon &amp; Toulouse | 24ème Congrès ROADEF · Fév 2023 · Rennes</fr><en>— Green IT seminars · Lyon &amp; Toulouse | 24th ROADEF Congress · Feb 2023 · Rennes</en></span></div>
+      <div class="comm-entry"><span class="comm-bullet">▸</span><span><strong><fr>Responsabilité des algorithmes</fr><en>Algorithmic accountability</en></strong>
+        <fr>— Enjeux Sociétaux et Environnementaux · Mai 2023 · Aussois</fr><en>— Societal and Environmental Issues · May 2023 · Aussois</en></span></div>
+      <div class="comm-entry"><span class="comm-bullet">▸</span><span><strong>CCEET</strong>
+        — Climate Change and European Energy Transition · <fr>Juin 2021</fr><en>Jun 2021</en> · Belfort</span></div>
+      <div class="comm-entry"><span class="comm-bullet">▸</span><span><strong>CC</strong>
+        — Cloud Computing (AWS) · <fr>14-17 juin 2021 · En ligne</fr><en>June 14–17, 2021 · Online</en></span></div>
+      <div class="comm-entry"><span class="comm-bullet">▸</span><span><strong><fr>Jeunes Chercheurs en Ordonnancement et Planification</fr><en>Young Researchers in Scheduling and Planning</en></strong>
+        · Nov 2021 · Sorbonne Université, Paris</span></div>
+      <div class="comm-entry"><span class="comm-bullet">▸</span><span><strong>Summer School ACP</strong>
+        — Constraint Programming, Combinatorial Optimization &amp; Machine Learning · Nov 2020 · Toulouse</span></div>
+      <div class="comm-entry"><span class="comm-bullet">▸</span><span><strong>Green University</strong>
+        <fr>— Formation sur les enjeux du changement climatique · 2019–2020 · Grenoble</fr><en>— Training on climate change issues · 2019–2020 · Grenoble</en></span></div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-wrap">
+
+        <div>
+          <div class="skill-head"><p>Frontend</p><i></i></div>
+          <div class="skill-row"><span class="skill-sub"><fr>Langages</fr><en>Languages</en></span>
+            <div class="pill-group"><span class="pill pill-light">HTML</span><span class="pill pill-light">CSS</span><span class="pill pill-light">JavaScript</span><span class="pill pill-light">TypeScript</span></div></div>
+          <div class="skill-row"><span class="skill-sub">Frameworks</span>
+            <div class="pill-group"><span class="pill pill-light">Angular</span><span class="pill pill-light">Ionic</span></div></div>
         </div>
 
-        <div class="entry">
-          <div class="entry-header">
-            <span class="entry-title">Doctorat Informatique — Femto-ST</span>
-            <span class="entry-date">Oct 2020 — Déc 2024</span>
-          </div>
-          <span class="entry-location">Besançon, France</span>
-          <div class="entry-body">
-            <p class="entry-item"><strong>Sujet :</strong> Standalone Data-Center Sizing Combating the Over-Provisioning
-              of the IT and Electrical Parts</p>
-            <p class="entry-item"><strong>Encadrants :</strong> Jean-Marc NICOD &amp; Georges DA COSTA</p>
-            <p class="entry-item"><strong>Description :</strong> Projet ANR Datazero2, simulation d'un datacenter 100%
-              autonome en énergie. Développement solo du module entier de Sizing (Python, 4 ans, ownership complet d'un
-              projet logiciel de bout en bout) — génération de
-              configurations
-              optimales, parallélisation multi-thread avancée (optimisation performance, scalabilité), clean code,
-              recherche reproductible, documentation
-              complète et visualisation des résultats. Architecture modulaire, documentée et prête à l'intégration.</p>
-            <p class="entry-item"><strong>Lien du projet : </strong> <a class="pub-link"
-                href="www.irit.fr/datazero/datazero2/" target="_blank">www.irit.fr/datazero/datazero2/</a></p>
-
-          </div>
+        <div>
+          <div class="skill-head"><p>Backend</p><i></i></div>
+          <div class="skill-row"><span class="skill-sub"><fr>Langages</fr><en>Languages</en></span>
+            <div class="pill-group"><span class="pill pill-light">Python</span><span class="pill pill-light">Java</span><span class="pill pill-light">C / C++</span><span class="pill pill-light">Rust</span><span class="pill pill-light">Ada</span></div></div>
+          <div class="skill-row"><span class="skill-sub"><fr>BDD</fr><en>Databases</en></span>
+            <div class="pill-group"><span class="pill pill-light">MariaDB (MySQL)</span></div></div>
+          <div class="skill-row"><span class="skill-sub"><fr>Outils</fr><en>Tools</en></span>
+            <div class="pill-group"><span class="pill pill-light">Docker</span><span class="pill pill-light">Git / Github</span><span class="pill pill-light">Linux / Shell</span></div></div>
         </div>
 
-        <div class="entry">
-          <div class="entry-header">
-            <span class="entry-title">Master 2 Data Infrastructure — CTRL-A</span>
-            <span class="entry-date">Fév 2020 — Juin 2020</span>
-          </div>
-          <span class="entry-subtitle">Informatique MOSIG, Stage + Magister</span>
-          <span class="entry-location">Grenoble, France</span>
-          <div class="entry-body">
-            <p class="entry-item"><strong>Sujet :</strong> Relationships between Scheduling and Autonomic Computing
-              Techniques Applied to Parallel Computing Resource Management</p>
-            <p class="entry-item"><strong>Encadrants :</strong> Raphaël BLEUSE &amp; Eric RUTTEN</p>
-            <p class="entry-item"><strong>Description :</strong> Exploration de l'alliance entre informatique parallèle
-              et automatique — application des boucles de rétrocontrôle (MAPE-K) à la conception d'algorithmes
-              d'ordonnancement clairvoyants pour la gestion de ressources. Première incursion d'un domaine dans l'autre,
-              illustrant une capacité d'adaptation à des champs disciplinaires nouveaux.</p>
-          </div>
+        <div>
+          <div class="skill-head"><p><fr>Parallélisme</fr><en>Parallelism</en></p><i></i></div>
+          <div class="pill-group"><span class="pill pill-light">OpenMP (C/C++)</span><span class="pill pill-light">MPI</span></div>
         </div>
 
-        <div class="entry">
-          <div class="entry-header">
-            <span class="entry-title">Master 1 Data Infrastructure — LIG-POLARIS</span>
-            <span class="entry-date">Fév 2019 — Juin 2019</span>
-          </div>
-          <span class="entry-subtitle">Informatique, Stage + Magister</span>
-          <span class="entry-location">Grenoble, France</span>
-          <div class="entry-body">
-            <p class="entry-item"><strong>Sujet :</strong> Tracing tool with OpenMP (task-based parallelism)</p>
-            <p class="entry-item"><strong>Encadrant :</strong> Vincent DANJEAN</p>
-            <p class="entry-item"><strong>Description :</strong> développement d'un outil de traçage visuel pour OpenMP
-              en C/C++, permettant d'analyser et de visualiser le comportement des processus en cours d'exécution, via
-              d'autres alternatives que le diagramme de Gantt. Étude approfondie de la parallélisation bas niveau et des
-              mécanismes de synchronisation inter-processus.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- PUBLICATIONS -->
-      <section class="section" id="publications">
-        <h2 class="section-title">Publications</h2>
-
-        <div class="pub-entry">
-          <p class="pub-venue">Thèse de doctorat · 2024</p>
-          <p class="pub-title">Optimization of the IT and electrical sizing process of a green, medium-sized datacenter
-            powered exclusively by renewable energy sources, considering environmental and external uncertainty</p>
-          <a class="pub-link" href="https://theses.fr/2024UBFCD076" target="_blank">theses.fr/2024UBFCD076</a>
+        <div>
+          <div class="skill-head"><p>Data Science</p><i></i></div>
+          <div class="skill-row"><span class="skill-sub">Python</span>
+            <div class="pill-group"><span class="pill pill-light">Jupyter</span><span class="pill pill-light">pandas</span><span class="pill pill-light">matplotlib</span><span class="pill pill-light">seaborn</span><span class="pill pill-light">Plotly</span><span class="pill pill-light">scikit-learn</span></div></div>
         </div>
 
-        <div class="pub-entry">
-          <p class="pub-venue">Conférence Internationale · SBAC-PADW 2022</p>
-          <p class="pub-title">Standalone Data-Center Sizing Combating the Over-Provisioning of the IT and Electrical
-            Parts</p>
-          <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/9978502"
-            target="_blank">ieeexplore.ieee.org/abstract/document/9978502</a>
-        </div>
+      </div>
+    </section>
 
-        <div class="pub-entry">
-          <p class="pub-venue">Conférence Nationale · COMPAS 2022</p>
-          <p class="pub-title">Dimensionnement d'un centre de données autonome alimenté 100% par des énergies
-            renouvelables</p>
-          <a class="pub-link" href="https://hal.science/hal-03889472/" target="_blank">hal.science/hal-03889472/</a>
-        </div>
+  </main>
+</div>
 
-        <div class="pub-entry">
-          <p class="pub-venue">Master · 2020</p>
-          <p class="pub-title">Relationships between Scheduling and Autonomic Computing Techniques Applied to Parallel
-            Computing Resource Management</p>
-          <a class="pub-link" href="https://inria.hal.science/hal-03758320"
-            target="_blank">inria.hal.science/hal-03758320</a>
-        </div>
-      </section>
+<script>
+  const T = { fr: 'Manal BENAISSA — CV', en: 'Manal BENAISSA — Resume' };
+  const root = document.documentElement;
 
-      <!-- COMMUNICATIONS -->
-      <section class="section" id="communications">
-        <h2 class="section-title">Communications</h2>
+  function setLang(l) {
+    root.lang = l;
+    document.title = T[l];
+    document.querySelectorAll('.lang-switch button').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+    try { localStorage.setItem('lang', l); } catch (e) {}
+  }
+  document.querySelectorAll('.lang-switch button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+  setLang(root.lang === 'en' ? 'en' : 'fr');
 
-        <div class="comm-entry">
-          <span class="comm-bullet">▸</span>
-          <span>SCALE Days – GDR RO LIP6 · Décembre 2022 &amp; Workshop "New Challenges in Scheduling Theory" – Inria ·
-            Mai 2022</span>
-        </div>
-        <div class="comm-entry">
-          <span class="comm-bullet">▸</span>
-          <span>Présentations aux journées du département AS2M – FEMTO-ST, Besançon (2020–2022)</span>
-        </div>
-        <div class="comm-entry">
-          <span class="comm-bullet">▸</span>
-          <span>Séminaire au département PHM – FEMTO-ST, Besançon (2020–2022)</span>
-        </div>
-      </section>
-
-      <!-- ENSEIGNEMENT -->
-      <section class="section" id="enseignement">
-        <h2 class="section-title">Expérience Enseignement</h2>
-
-        <div class="entry">
-          <div class="entry-header">
-            <span class="entry-title">ATER</span>
-            <span class="entry-date">Sep 2024 — Présent</span>
-          </div>
-          <span class="entry-location">Supmicrotech-ENSMM · Besançon, France</span>
-          <div class="entry-body">
-            <p class="entry-item"><strong>1ère année (école d'ingénieur) :</strong> Programmation Orientée Objet (Java)
-              — TD / TP</p>
-            <p class="entry-item"><strong>2ème année (école d'ingénieur) :</strong> Développement logiciel — Scrum /
-              Agile + Introduction à Git</p>
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <span class="entry-title">Co-encadrement projet PIST REA</span>
-            <span class="entry-date">2024</span>
-          </div>
-          <span class="entry-location">Supmicrotech-ENSMM · Besançon, France</span>
-          <p class="entry-item">Co-supervision de projet d'études d'étudiants de 3ème année, pendant un semestre.
-            Analyse statistique de données sur un sujet complexe, initiation au travail de Data Analyst (Mentoring,
-            tech lead junior)</p>
-        </div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <span class="entry-title">Chargé d'enseignement doctorant — 64h</span>
-            <span class="entry-date">2020 — 2022</span>
-          </div>
-          <span class="entry-location">Supmicrotech-ENSMM · Besançon, France</span>
-          <div class="entry-body">
-            <p class="entry-item">Programmation orientée objet (Java) — TP, 1ère &amp; 2ème année</p>
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <span class="entry-title">Stage informatique — Médiation</span>
-            <span class="entry-date">Fév – Juin 2018</span>
-          </div>
-          <span class="entry-location">LIG-Polaris · Grenoble, France</span>
-          <div class="entry-body">
-            <p class="entry-item">Informatique "Unplugged", médiation numérique &amp; algorithmique — <a
-                href="https://iso.gricad-pages.univ-grenoble-alpes.fr/ISO/Base-Ball/" target="_blank"
-                style="color:var(--sage);text-decoration:none;border-bottom:1px solid var(--sage);font-size:.78rem;transition:color .2s;"
-                onmouseover="this.style.color='var(--pine)'" onmouseout="this.style.color='var(--sage)'">voir le
-                projet</a></p>
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <span class="entry-title">Vulgarisation scientifique</span>
-            <span class="entry-date">Juin 2018</span>
-          </div>
-          <div class="entry-body">
-            <p class="entry-item">Formation à la vulgarisation de sujets de recherche dans le cadre de la culture
-              scientifique</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- FORMATIONS -->
-      <section class="section" id="formations">
-        <h2 class="section-title">Formations &amp; Événements</h2>
-
-        <div class="comm-entry">
-          <span class="comm-bullet">▸</span>
-          <span><strong>Formation Cybersécurité <a class="pub-link" href="https://tryhackme.com/"
-                target="_blank">TryHackMe</a></strong> — Formation certifiante Red/Blue team · été 2026 · En
-            ligne</span>
-        </div>
-        <div class="comm-entry">
-          <span class="comm-bullet">▸</span>
-          <span><strong>GreenDays 2023 &amp; 2024</strong> — Séminaires Green IT · Lyon &amp; Toulouse | 24ème Congrès
-            ROADEF · Fév 2023 · Rennes</span>
-        </div>
-        <div class="comm-entry">
-          <span class="comm-bullet">▸</span>
-          <span><strong>Responsabilité des algorithmes</strong> — Enjeux Sociétaux et Environnementaux · Mai 2023 ·
-            Aussois</span>
-        </div>
-        <div class="comm-entry">
-          <span class="comm-bullet">▸</span>
-          <span><strong>CCEET</strong> — Climate Change and European Energy Transition · Juin 2021 · Belfort</span>
-        </div>
-        <div class="comm-entry">
-          <span class="comm-bullet">▸</span>
-          <span><strong>CC</strong> — Cloud Computing (AWS) · 14-17 juin 2021 · En Ligne</span>
-        </div>
-        <div class="comm-entry">
-          <span class="comm-bullet">▸</span>
-          <span><strong>Jeunes Chercheurs en Ordonnancement et Planification</strong> · Nov 2021 · Sorbonne Université,
-            Paris</span>
-        </div>
-        <div class="comm-entry">
-          <span class="comm-bullet">▸</span>
-          <span><strong>Summer School ACP</strong> — Constraint Programming, Combinatorial Optimization &amp; Machine
-            Learning · Nov 2020 · Toulouse</span>
-        </div>
-        <div class="comm-entry">
-          <span class="comm-bullet">▸</span>
-          <span><strong>Green University</strong> — Formation sur les enjeux du changement climatique · 2019–2020 ·
-            Grenoble</span>
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-      <section class="section" id="skills">
-        <h2 class="section-title">Skills</h2>
-        <div style="display:flex; flex-direction:column; gap:20px; padding-top:4px;">
-
-          <!-- Frontend -->
-          <div>
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-              <p
-                style="font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);font-weight:600;">
-                Frontend</p>
-              <div style="flex:1;height:1px;background:var(--rule);"></div>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:6px;">
-              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-                <span style="font-size:.72rem;color:#7a8c82;width:80px;flex-shrink:0;">Langages</span>
-                <div class="pill-group">
-                  <span class="pill"
-                    style="background:var(--mist);color:var(--pine);border-color:transparent;">HTML</span>
-                  <span class="pill"
-                    style="background:var(--mist);color:var(--pine);border-color:transparent;">CSS</span>
-                  <span class="pill"
-                    style="background:var(--mist);color:var(--pine);border-color:transparent;">JavaScript</span>
-                  <span class="pill"
-                    style="background:var(--mist);color:var(--pine);border-color:transparent;">TypeScript</span>
-                </div>
-              </div>
-              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-                <span style="font-size:.72rem;color:#7a8c82;width:80px;flex-shrink:0;">Frameworks</span>
-                <div class="pill-group">
-                  <span class="pill"
-                    style="background:var(--mist);color:var(--pine);border-color:transparent;">Angular</span>
-                  <span class="pill"
-                    style="background:var(--mist);color:var(--pine);border-color:transparent;">Ionic</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Backend -->
-          <div>
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-              <p
-                style="font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);font-weight:600;">
-                Backend</p>
-              <div style="flex:1;height:1px;background:var(--rule);"></div>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:6px;">
-              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-                <span style="font-size:.72rem;color:#7a8c82;width:80px;flex-shrink:0;">Langages</span>
-                <div class="pill-group">
-                  <span class="pill"
-                    style="background:var(--mist);color:var(--pine);border-color:transparent;">Python</span>
-                  <span class="pill"
-                    style="background:var(--mist);color:var(--pine);border-color:transparent;">Java</span>
-                  <span class="pill" style="background:var(--mist);color:var(--pine);border-color:transparent;">C /
-                    C++</span>
-                  <span class="pill"
-                    style="background:var(--mist);color:var(--pine);border-color:transparent;">Rust</span>
-                  <span class="pill"
-                    style="background:var(--mist);color:var(--pine);border-color:transparent;">Ada</span>
-                </div>
-              </div>
-              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-                <span style="font-size:.72rem;color:#7a8c82;width:80px;flex-shrink:0;">BDD</span>
-                <div class="pill-group">
-                  <span class="pill" style="background:var(--mist);color:var(--pine);border-color:transparent;">MariaDB
-                    (MySQL)</span>
-                </div>
-              </div>
-              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-                <span style="font-size:.72rem;color:#7a8c82;width:80px;flex-shrink:0;">Outils</span>
-                <div class="pill-group">
-                  <span class="pill"
-                    style="background:var(--mist);color:var(--pine);border-color:transparent;">Docker</span>
-                  <span class="pill" style="background:var(--mist);color:var(--pine);border-color:transparent;">Git /
-                    Github</span>
-                  <span class="pill" style="background:var(--mist);color:var(--pine);border-color:transparent;">Linux /
-                    Shell</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Parallélisme -->
-          <div>
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-              <p
-                style="font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);font-weight:600;">
-                Parallélisme</p>
-              <div style="flex:1;height:1px;background:var(--rule);"></div>
-            </div>
-            <div class="pill-group">
-              <span class="pill" style="background:var(--mist);color:var(--pine);border-color:transparent;">OpenMP
-                (C/C++)</span>
-              <span class="pill" style="background:var(--mist);color:var(--pine);border-color:transparent;">MPI</span>
-            </div>
-          </div>
-
-          <!-- Data Science -->
-          <div>
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-              <p
-                style="font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);font-weight:600;">
-                Data Science</p>
-              <div style="flex:1;height:1px;background:var(--rule);"></div>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
-              <span style="font-size:.72rem;color:#7a8c82;width:80px;flex-shrink:0;">Python</span>
-              <div class="pill-group">
-                <span class="pill"
-                  style="background:var(--mist);color:var(--pine);border-color:transparent;">Jupyter</span>
-                <span class="pill"
-                  style="background:var(--mist);color:var(--pine);border-color:transparent;">pandas</span>
-                <span class="pill"
-                  style="background:var(--mist);color:var(--pine);border-color:transparent;">matplotlib</span>
-                <span class="pill"
-                  style="background:var(--mist);color:var(--pine);border-color:transparent;">seaborn</span>
-                <span class="pill"
-                  style="background:var(--mist);color:var(--pine);border-color:transparent;">Plotly</span>
-                <span class="pill"
-                  style="background:var(--mist);color:var(--pine);border-color:transparent;">scikit-learn</span>
-              </div>
-            </div>
-          </div>
-
-
-
-        </div>
-      </section>
-
-    </main>
-  </div>
-  <script>
-    const btn = document.querySelector('.theme-toggle');
-    const knob = btn.querySelector('.knob');
-    btn.addEventListener('click', () => {
-      const dark = document.documentElement.classList.contains('dark');
-      knob.textContent = dark ? '☀️' : '🌙';
-    });
-  </script>
+  const knob = document.querySelector('.theme-toggle .knob');
+  document.getElementById('themeBtn').addEventListener('click', () => {
+    root.classList.toggle('dark');
+    knob.textContent = root.classList.contains('dark') ? '🌙' : '☀️';
+  });
+</script>
 </body>
-
 </html>
